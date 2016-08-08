@@ -1,0 +1,34 @@
+<template bindable="router">
+          <!--<header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <a class="mdl-navigation__link mdl-layout-title" href="#/">Aurelia Investigation</a>
+                <div class="mdl-layout-spacer"></div>
+                  <nav class="mdl-navigation">
+                          <div repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+                            <a class="mdl-navigation__link" data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse.in" href.bind="row.href">${row.title}</a>
+                          </div>
+                  </nav>
+            </div>
+           </header>-->
+
+          <!-- Simple header with fixed tabs. -->
+          <!--<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">-->
+            <header class="header_color mdl-layout__header">
+              <div class="mdl-layout__header-row header_color">
+                <!-- Title -->
+                <a class="mdl-layout-title mdl-navigation__link" href="#/">Aurelia Investigation</a>
+              <!-- Tabs -->
+              <!--<div class="header_color mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#/welcome" class="mdl-layout__tab is-active">Welcome</a>
+                <a href="#/git" class="mdl-layout__tab">Github</a>
+                <a href="#/widget" class="mdl-layout__tab">Widget</a>
+              </div>-->                
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                  <div repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+                    <a class="mdl-navigation__link" data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse.in" href.bind="row.href">${row.title}</a>
+                  </div>
+                </nav>
+              </div>
+            </header>
+</template>

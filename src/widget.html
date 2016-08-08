@@ -1,0 +1,56 @@
+<template>
+    <section class="is-active mdl-grid items" id="/widget">
+                <!--Widget List-->
+                <div class="mdl-cell mdl-cell--6-col">
+                    <div class="widget-card mdl-card mdl-shadow--2dp" repeat.for="widget of widgets" click.delegate="selectWidget(widget)">
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">${widget.name}</h2>
+                            </div>
+                            
+                            <div class="mdl-card__supporting-text">
+                                ${widget.price}
+                            </div>
+                            
+                            <div class="mdl-card__menu">
+                                <button
+                                class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons" click.delegate="deleteWidget(widget)">close</i>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+
+                <!--Widget Details-->
+                <div class="mdl-cell mdl-cell--6-col">
+                    <div class="item-card mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Editing</h2>
+                            <h2 class="mdl-card__title-text">Create New Widget</h2>
+                        </div>
+                            <div class="mdl-card__supporting-text">
+                        <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield" >
+                                        <input type="text" class="mdl-textfield__input" id="widget-input" value.bind="widget.name">
+                                        <label class="mdl-textfield__label" for="widget-input">Widget Name</label>
+                                    </div>
+
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input type="text" class="mdl-textfield__input" pattern="-?[0-9]*(\.[0-9]+)?" id="price-input" value.bind="widget.price">
+                                        <label class="mdl-textfield__label" for="price-input">Widget price</label>
+                                        <span class="mdl-textfield__error">Input is not a number!</span>
+                                    </div>
+                                    ${widget.name}
+                                    ${widget.price}
+                            </div>
+                        </form>
+                            <div class="mdl-card__actions">
+                                <button type="button"
+                                class="mdl-button mdl-js-button mdl-js-ripple-effect" click.delegate="resetWidget()">Cancel</button>
+                                
+                                <input type="submit" click.delegate="saveWidget()"
+                                class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">
+                            </div>
+                    </div>
+                </div>
+    </section>
+</template>

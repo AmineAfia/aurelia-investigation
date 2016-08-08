@@ -1,0 +1,19 @@
+{
+  "widget": [
+    {
+      "name": "Widget 1",
+      "price": 300,
+      "id": 1
+    },
+    {
+      "name": "Widget 2",
+      "price": 150,
+      "id": 2
+    },
+    {
+      "name": "Widget 3",
+      "price": 200,
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<template>
+  <require from="./nav-bar.html"></require>
+  <require from="./side-bar.html"></require>
+    <div class="mdl-js-layout">
+      <side-bar class="mdl-js-layout"></side-bar>
+      <nav-bar class="mdl-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" router.bind="router"></nav-bar>
+
+      <main class="page-content">
+        <router-view></router-view>
+      </main>
+    </div>
+</template>
